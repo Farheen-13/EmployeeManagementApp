@@ -5,13 +5,11 @@ public class EmployeeService {
 
     private List<Employee> employees = new ArrayList<>();
 
-    // Add employee
     public void addEmployee(Employee emp) {
         employees.add(emp);
         System.out.println("Employee added successfully!");
     }
 
-    // View all employees
     public void listEmployees() {
         if (employees.isEmpty()) {
             System.out.println("No employees to display.");
@@ -22,7 +20,6 @@ public class EmployeeService {
         }
     }
 
-    // Update employee by ID
     public void updateEmployee(int id, String newName, String newDepartment, double newSalary) {
         for (Employee emp : employees) {
             if (emp.getId() == id) {
@@ -36,7 +33,6 @@ public class EmployeeService {
         System.out.println("Employee not found.");
     }
 
-    // Delete employee by ID
     public void deleteEmployee(int id) {
         Employee toRemove = null;
         for (Employee emp : employees) {
@@ -53,7 +49,6 @@ public class EmployeeService {
         }
     }
 
-    // Search employee by ID
     public void searchById(int id) {
         for (Employee emp : employees) {
             if (emp.getId() == id) {
