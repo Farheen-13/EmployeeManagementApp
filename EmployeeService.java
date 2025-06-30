@@ -51,4 +51,14 @@ public class EmployeeService {
       System.out.println("Employee not found.");
     }
   }
+
+  public void searchById(int id) {
+    for (Employee emp : employees) {
+      if (emp.getId() == id) {
+        System.out.println("Employee found: " + emp);
+        return;
+      }
+    }
+    System.out.println("Employee not found.");
+  }
 }
